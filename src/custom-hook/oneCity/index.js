@@ -18,9 +18,15 @@ export const useOneCity = () => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY.key4}`)
         .then(r => r.json())
         .then(d => updateCity([d]))
+    
     },[])
     
     return {cityOne, updateCity}
 
+    /**
+     *  fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY.key4}`)
+        .then(r => r.json())
+        .then(d => updateCity([d]))
+     */
 }
 
