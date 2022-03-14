@@ -119,3 +119,9 @@
     transform: scale(0.95);
 
 }
+
+.card-rating{
+    display: flex;
+
+
+}

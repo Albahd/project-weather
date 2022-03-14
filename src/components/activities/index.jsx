@@ -233,7 +233,7 @@ function Activities() {
         }
     }
 
-    console.log(cityOne)
+
 
     return (
         <Container className="container-activities" >
@@ -369,7 +369,7 @@ function Activities() {
 
                             ) : ''}
 
-                            {}
+                            
                             {restaurant.map(e => e.results.map(r => (
                                 <article >
                                     <Card style={{ borderRadius: '12px', background: 'none', border: 'none' }} className="card-activity">
@@ -377,10 +377,11 @@ function Activities() {
                                     
                                     </Card>
                                     <footer className="footer-card">
-                                        <p>{r.rating}</p>
+                                       <div className="card-rating"> <p>{r.rating}</p>
+                                        <p>({r.user_ratings_total})</p>
+                                        </div>
                                         <p>{r.name}</p>
-                                        <p>{r.user_ratings_total}</p>
-                                        <p>{r.price_level}</p>
+                                        {/* <p>{r.price_level}</p> */}
                                     </footer>
                                 </article>
                             )))}

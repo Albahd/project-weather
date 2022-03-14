@@ -16,7 +16,7 @@ export const usePlaces = e => {
 
 
     useEffect(() => {
-       fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=1500&type=${placeSearch}&key=${API_KEY}`)
+       fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=1500&type=${placeSearch}&key=AIzaSyDU_rTJMBQ3rp8BRMiqFb9_sgd4AsxOJ-E`)
             .then(r => r.json())
                 .then(d => {                 
                 console.log(d)

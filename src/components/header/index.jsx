@@ -43,7 +43,7 @@ function Header() {
 
     const searchLoc = async e => {
         if (e.key === 'Enter') {
-            const r = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location},ES&units=${unit}&appid=${API_KEY.key10}&lang=es`)
+            const r = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location},ES&units=${unit}&appid=${API_KEY.key}&lang=es`)
             const d = await r.json()
             updateCityContext([d])
             updatelat(d.coord.lat)
